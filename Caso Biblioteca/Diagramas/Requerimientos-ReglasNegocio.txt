@@ -1,0 +1,45 @@
+Ejemplo Biblioteca
+
+Lista de los requerimientos del sistema (funcionales)
+Identificación Descripción
+1 Ingreso y mantenimiento de socios
+2 Ingreso de libros y ejemplares
+3 Gestión de prestamos a domicilio
+4 Informe de prestamos vencidos
+5 Informe de socios sancionados, detallando sanciones anteriores
+6 Informe de libros pendientes de devolución
+7 Informe histórico de sanciones a los socios
+
+Reglas de negocio y especificaciones complementarias
+Id 	Regla
+1 	Los socios se identifican con un número de socio.
+2 	De los socios se conoce: nombre, apellido, domicilio y teléfono
+3 	La fecha de devolución se calcula como la fecha del préstamo mas los días del
+	préstamo
+4 	Al día siguiente a la fecha de devolución, los socios que no hayan devuelto los libros
+	prestados pasan a estar inhabilitados
+5 	Al devolver el libro fuera de término los socios son sancionados. Los días de sanción se
+	calculan en función de los días de atraso (Ejemplo: de 1 a 3 días de atraso 7 días de
+	sanción, etc.).En el caso de devolver varios libros con distintos atrasos, para calcular la
+	sanción se tendrá en cuenta el mayor atraso.
+	De las sanciones se desea conocer la fecha de sanción y la cantidad de días de
+	sanción.
+6 	Un socio sancionado o inhabilitado no puede retirar libros a domicilio
+7 	El socio no puede retirar más de una determinada cantidad de ejemplares a domicilio.
+	Esta cantidad esta fijada en el reglamento.
+8 	Los días de préstamo no pueden superar los topes permitidos para cada libro.
+9 	La biblioteca posee de algunos libros varios ejemplares. Los libros se identifican con un
+	código de libro y los ejemplares con un número de ejemplar independiente del libro.
+10 	De los libros se tiene registrado su título, su autor (si libro tienen varios autores se
+	adopta uno) y su fecha de alta
+11 	Un préstamo se puede realizar por uno o varios ejemplares pero de distintos libros. No
+	se puede retirar un ejemplar de un libro que se tenga pendiente de devolución.
+12 	Todos los libros del préstamo se prestan por la misma cantidad de días.
+13 	La biblioteca atiende todos los días del año
+14 	Solo se les otorga préstamos a domicilio a los socios de la biblioteca, y al retirar libros
+	los socios deben concurrir a la biblioteca con su carnet de identificación.
+15 	Los préstamos se registran con un número de préstamo, la fecha y hora del préstamo.
+	Un préstamo puede ser realizado por uno o varios libros.
+16 	El comprobante de devolución tiene los siguientes datos: número de socio, nombre de
+	socio, fecha de devolución y detalle de ejemplares devueltos (identificación de ejemplar
+	y título del libro).

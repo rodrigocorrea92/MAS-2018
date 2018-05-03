@@ -1,0 +1,57 @@
+Caso de Uso: devolución de ejemplares a domicilio.
+
+Alcance del caso de uso: 
+- Sistema
+
+Meta:
+- Usuario
+
+Interaccion:
+- Dialogal
+
+Precondiciones: 
+- El sistema posee los préstamos del socio registrado.
+
+Actores: 
+- Socio 
+- Bibliotecario.
+
+El socio se presenta con el ejemplar de uno o varios libros ante el bibliotecario. 
+
+Camino basico:
+
+1- El bibliotecario ingresa identificación del socio
+2- El sistema:
+    2.1- Valida que el socio exista.
+    2.2- Muestra nombre y apellido del socio.
+    2.3- Muestra los ejemplares pendientes de devolución (n° de ejemplar y título). 
+  
+3- El bibliotecario selecciona  (dentro de los que muestra el sistema en el paso anterior) 
+ los ejemplares a devolver y confirma la devolución.
+4- El sistema:
+    4.1- Registra la deovolución.
+    4.2  Emite comprobante de devolución.Este comprobante tiene los siguientes datos: 
+			número de socio, 
+			apellido y nombre de socio, 
+			fecha de devolución y 
+			detalle de ejemplares devueltos (identificación de ejemplar y título del libro). 
+ 
+ 
+    
+Caminos alternativos:
+
+2.1.A- El socio no existe.
+2.1.A.1- El sistema muestra el mensaje 
+"El número de socio no existe".
+2.1.A.2- Termina el caso de uso.
+
+4.1.A- Cuando corresponda sanción (RN n° 5).
+4.1.A.1- Se registra la sanción
+4.1.A.2- Vuelve al paso 4.2 .
+    
+
+Éxito: Se registró la devolución.
+Éxito de los caminos alternativos: Se registró la sanción.
+
+Fracaso: No se registró la devolución
+    
